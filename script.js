@@ -32,7 +32,7 @@ async function fazerLogin() {
       const token = data.token;
       localStorage.setItem("token", token);
       // Redirecionando para a dashboard do usuário
-      window.location.href = "../painelADM/painelAdm.html";
+      window.location.href = "../painelAdm/painelAdm.html";
     } else {
       mensagemErro.textContent = `${data.mensagem}`;
       mensagemErro.style.display = "block";
