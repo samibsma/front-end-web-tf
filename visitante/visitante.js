@@ -7,27 +7,25 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const cardapioContainer = document.getElementById("cardapio-container");
 
-    /*
-        diasDaSemana que associa cada dia da semana a um número de 0 a 6. Em seguida, 
-        utilizamos o método sort para ordenar os cardápios com base nos números associados 
-        aos dias da semana. A função de comparação compara os cardápios, mantendo a ordem 
-        se o número do dia de a for menor que o de b. Dessa forma, ao final do processo, 
-        os cardápios são ordenados seguindo a ordem dos dias da semana definida no objeto diasDaSemana.
-     */
-    const diasDaSemana = {
-      Domingo: 0,
-      "Segunda-Feira": 1,
-      "Terça-Feira": 2,
-      "Quarta-Feira": 3,
-      "Quinta-Feira": 4,
-      "Sexta-Feira": 5,
-      Sábado: 6,
-    };
+    // Função de comparação para ordenar os cardápios por dia da semana
+    function compararDiasDaSemana(a, b) {
+      const diasOrdenados = [
+        "Domingo",
+        "Segunda-Feira",
+        "Terça-Feira",
+        "Quarta-feira",
+        "Quinta-feira",
+        "Sexta-feira",
+        "Sábado",
+      ];
+      return (
+        diasOrdenados.indexOf(a.dia_da_semana) -
+        diasOrdenados.indexOf(b.dia_da_semana)
+      );
+    }
 
     // Ordenar os cardápios pelo dia da semana
-    cardapios.sort(
-      (a, b) => diasDaSemana[a.dia_da_semana] - diasDaSemana[b.dia_da_semana]
-    );
+    cardapios.sort(compararDiasDaSemana);
 
     cardapios.forEach((cardapio) => {
       const cardapioDiv = document.createElement("div");
