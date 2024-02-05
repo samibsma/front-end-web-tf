@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 async function adicionarFeedback(idCardapio, nota) {
   try {
     const response = await fetch(
-      `${baseUrl}/${idCardapio}`,
+      `${baseUrl}/feedback/${idCardapio}`,
       {
         method: "POST",
         headers: {
