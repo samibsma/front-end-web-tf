@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="painelAdm.css" />
+    <title>Painel do administrador</title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <img
+          class="logo-img"
+          src="../assets/images/logoIfnmg.png"
+          alt="logo ifnmg"
+        />
+      </header>
+      
+      <nav>
+        <button onclick="paginas('criar')">
+          <span>
+            <i class="material-symbols-outlined">Add</i>
+            <span>Criar Cardápio</span>
+          </span>
+        </button>
+        <button onclick="paginas('listar')">
+          <span>
+            <i class="material-symbols-outlined">List</i>
+            <span>Listar Cardápio</span>
+          </span>
+        </button>
+        <button onclick="paginas('editar')">
+          <span>
+            <i class="material-symbols-outlined">Edit</i>
+            <span>Editar Cardápio</span>
+          </span>
+        </button>
+        <button onclick="paginas('excluir')">
+          <span>
+            <i class="material-symbols-outlined">Delete</i>
+            <span>Exluir Cardápio</span>
+          </span>
+        </button>
+        <button onclick="paginas('feedbacks')">
+          <span>
+            <i class="material-symbols-outlined">Comment</i>
+            <span>Feedbacks Alunos</span>
+          </span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Criando menu mobile-->
+    <button class="button-mobile" onclick="togglemenu()">
+      <i class="material-symbols-outlined">Menu</i>
+      <span>Menu</span>
+    </button>
+
+    <nav class="menu-mobile" id="menu-mobile">
+      <button onclick="togglemenu()">
+        <span>
+          <i class="material-symbols-outlined">Close</i>
+        </span>
+      </button>
+      <button onclick="paginas('criar')">
+        <span>
+          <i class="material-symbols-outlined">Add</i>
+          <span class="mobile-text">Criar Cardápio</span>
+        </span>
+      </button>
+      <button onclick="paginas('listar')">
+        <span>
+          <i class="material-symbols-outlined">List</i>
+          <span class="mobile-text">Listar Cardápio</span>
+        </span>
+      </button>
+      <button onclick="paginas('editar')">
+        <span>
+          <i class="material-symbols-outlined">Edit</i>
+          <span class="mobile-text">Editar Cardápio</span>
+        </span>
+      </button>
+      <button onclick="paginas('excluir')">
+        <span>
+          <i class="material-symbols-outlined">Delete</i>
+          <span class="mobile-text">Exluir Cardápio</span>
+        </span>
+      </button>
+      <button onclick="paginas('feedbacks')">
+          <span>
+            <i class="material-symbols-outlined">Comment</i>
+            <span>Feedbacks Alunos</span>
+          </span>
+        </button>
+    </nav>
+
+    <main class="main" id="main-content">
+      <div class="container">
+        <h1>Cardápio do Refeitório - IF</h1>
+        <p class="descricao">Este site funciona como um cardápio online para o refeitório do IF. Nele, os alunos podem visualizar diariamente o que será servido no almoço e no café da manhã.</p>
+        
+        <p class="descricao">O site possui duas abas:</p>
+        
+        <h2 class="subtitulo">"Usuário"</h2>
+        <p class="descricao">Nesta aba, o servidor autorizado faz login no sistema utilizando e-mail e senha. Aqui, é possível editar, adicionar e atualizar o cardápio, além de visualizar os feedbacks dos alunos.</p>
+        
+        <h2 class="subtitulo">"Visitante"</h2>
+        <p class="descricao">Destinada aos alunos, eles podem acessar o cardápio do refeitório através de um link. Nesta aba, também podem escrever feedbacks sobre a comida.</p>
+    </div>
+      <!-- O conteúdo será dinânmico-->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    <script src="paineladm.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #a1edbd;
+}
+
+header {
+  background-color: #2de737;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+header p {
+  text-transform: uppercase;
+  margin-right: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header img {
+  width: 70px;
+  border-radius: 10px;
+  margin-left: 2rem;
+}
+
+.cardapio-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.cardapio {
+  background-color: #2de737;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: 40rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: #fff;
+}
+
+.cardapio h3 {
+  margin-bottom: 10px; /* Adicionado espaçamento abaixo do título */
+}
+
+.cardapio p {
+  margin: 8px 0;
+}
+
+
+/* Estilo específico para o botão "Adicionar Nota" */
+.adicionar-nota-btn {
+  background-color: #d2e61e;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.adicionar-nota-btn:hover {
+  background-color: #1f9d4a;
+}
+
+.adicionar-nota-btn:active {
+  background-color: #0d6e31;
+}
+
+
+@media (max-width: 920px) {
+  header img {
+    display: none;
+  }
+
+  header {
+    flex-direction: column; /* Alterado para uma coluna em dispositivos menores */
+    text-align: center; /* Centralizado o texto do cabeçalho */
+  }
+  header p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .cardapio {
+    width: 20rem;
+  }
+  .cardapio-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    padding: 5px;
+  }
+}

@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #a1edbd;
+  color: #fff;
+}
+.main {
+  margin-left: 250px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.subtitulo{
+   color: #fff;
+}
+.descricao {
+    color: #fff;
+    line-height: 1.4;
+}
+.border {
+  border: 1px solid red;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 240px;
+  height: 100%;
+  padding: 40px 10px 30px 10px;
+  border-right: 1px solid #fff;
+  transition: all 0.35s;
+}
+
+.sidebar-header {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.logo-img {
+  width: 100px;
+  min-width: 50px;
+  border-radius: 30%;
+  object-fit: cover;
+  transition: transform 0.4s;
+  margin-left: 50px;
+}
+
+.logo-img:hover {
+  transform: scale(1.2);
+}
+
+.sidebar button {
+  height: 60px;
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.sidebar button > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 16px 0 12px;
+  border-radius: 24px;
+  line-height: 1;
+  transition: all 0.6s;
+}
+
+.sidebar button:hover > span {
+  background: #2cde6d;
+}
+
+.sidebar button i {
+  position: relative;
+  font-size: 28px;
+  transition: 0.2s;
+}
+
+.sidebar button span {
+  font-size: 16px;
+}
+
+.sidebar > nav {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Ajustando sidebar com tamanho da tela */
+@media (width < 920px) {
+  .sidebar {
+    width: 72px;
+  }
+  .sidebar button > span {
+    width: 50px;
+  }
+  .sidebar button > span > span {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .logo-img {
+    width: 50px;
+    min-width: 50px;
+    border-radius: 30%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-left: 1px;
+  }
+  .main {
+    transition: margin 0.4s;
+    margin-left: 78px;
+  }
+}
+
+/* Menu Mobile*/
+.button-mobile {
+  display: none;
+  align-self: flex-start;
+  align-items: center;
+  margin: 16px;
+  background: transparent;
+  border: 0;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile-active {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2cde6d;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu-mobile-active button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  margin-bottom: 16px;
+}
+
+.menu-mobile-active button > span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mobile-text {
+  font-size: 22px;
+  margin-left: 8px;
+}
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+  .button-mobile {
+    display: flex;
+  }
+  .main {
+    margin-left: 5px;
+  }
+}
+
+/*Inicio da estilização do formulario de criar*/
+
+.criar-tituto {
+  color: #fff;
+  text-align: center;
+}
+
+.criar-formulario {
+  display: grid;
+  gap: 10px;
+}
+
+.criar-label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.criar-textarea,
+.criar-input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  resize: none;
+}
+
+.criar-button {
+  background-color: #7076ee;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.criar-button:hover {
+  background-color: #2b33ca;
+}
+
+/*Fim da estilização do formulario de criar*/
+
+/*Inicio da estilização para listar os cardapios*/
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  background-color: #2de737;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 0.7rem;
+}
+
+.cardapio-list {
+  margin-top: 20px;
+}
+
+.cardapio-item {
+  border: 2px solid #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.cardapio-item h2 {
+  text-align: center;
+  color: #fff;
+}
+.cardapio-item p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Início Estilo para botão de excluir*/
+.btn-excluir {
+  background-color: #e43636;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn-excluir:hover {
+  background-color: #cc0000;
+}
+/* Fim Estilo para botão de excluir*/
+
+
+/* Início Estilo para botão de editar*/
+.btn-editar {
+  background-color: #7076ee;
+  color: #fffd;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn-editar:hover {
+  background-color: #2b33ca;
+}
+/* Fim Estilo para botão de editar*/
+
+/*fim da estilização para listar os cardapios*/
+
+
+/* Início Estilo para botão de editar*/
+.editar-button {
+  background-color: #7076ee;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editar-button:hover {
+  background-color: #2b33ca;
+}
+/* Fim Estilo para botão de editar*/
+
+/* Início do estilo de feedbacks*/
+.feedback-item-container {
+  border: 2px solid #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.feedback-item h2{
+  text-align: center;
+}
+.feedback-item p{
+  font-weight: bold;
+}
+.feedback-nota{
+  color: #cc0000;
+}
+
+/* Fim do estilo de feedbacks*/
